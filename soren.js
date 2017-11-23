@@ -4,10 +4,12 @@ new Discord.RichEmbed();
 const newUsers = new Discord.Collection();
 const config = require("./config.json")
 
-
+bot.on('ready', () => {
+  bot.user.setGame('Flying Around!')
+})
 
 bot.on('ready', () => {
-  console.log('Slime is bouncing');
+  console.log('Ready For Flight!');
 });
 
 
@@ -30,6 +32,22 @@ if (command === "ping") {
     message.channel.send("pong");
 }    
 
+if (command === "js") {
+  message.channel.send("Code resources coming soon!");
+}
+
+if (command === "html") {
+  message.channel.send("Code resources coming soon!");
+}
+
+if (command === "css") {
+  message.channel.send("Code resources coming soon!");
+}
+
+if (command === "code") {
+  message.channel.send(" +js , +html, +css")
+}
+
 if (command === "embed") {
     message.channel.send({embed: {
   color: 7506394,
@@ -38,7 +56,7 @@ if (command === "embed") {
 }  
 
 if (command === "help") {
-  message.channel.send("```Info: \n  Prefix= * \n \n Regular Commands: \n  ping = Pong \n embed = Embeds any text \n sorendev = The maker of Soren bot \n \n Admin Commands: \n kick = Kicks user \n ban = bans user  ```")
+  message.channel.send("```Info: \n  Prefix= + \n \n Regular Commands: \n  ping = Pong \n code = learning resources to learn code \n embed = Embeds any text \n sorendev = The maker of Soren bot \n \n Admin Commands: \n kick = Kicks user \n ban = bans user \n \n Stuff Coming soon: Currency, ranks, and other fun stuff :)  ```")
 }
 
 if (command === "sorendev") {
