@@ -4,6 +4,6 @@ A utility bot for discord moderation and development.
 # Made with:
 Discord.js (https://discord.js.org/#/)
 
-IDE: (C9.io)
+Editor: Atom
 
 Node.js (https://nodejs.org/en/)
