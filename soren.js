@@ -6,7 +6,7 @@ const config = require("./config.json")
 
 bot.on('ready', () => {
   //bot.user.setActivity('my harem strip', {type: 'WATCHING'})
-  bot.user.setGame('Flying Around!')
+  bot.user.setActivity('Flying Around!')
 })
 
 bot.on('ready', () => {
@@ -51,15 +51,15 @@ if (command === "ping") {
 }
 
 if (command === "js") {
-  message.channel.send("Code resources coming soon!!");
+  message.channel.send("https://www.w3schools.com/Js/ and https://www.reddit.com/r/javascript/");
 }
 
 if (command === "html") {
-  message.channel.send("Code resources coming soon!");
+  message.channel.send("https://www.w3schools.com/html/ and https://www.reddit.com/r/html/");
 }
 
 if (command === "css") {
-  message.channel.send("Code resources coming soon!");
+  message.channel.send("https://www.w3schools.com/css/ and https://www.reddit.com/r/css/");
 }
 
 if (command === "code") {
@@ -104,7 +104,7 @@ if (command === "sorendev") {
 }
 //admin
 if(command === "kick") {
-    if(!message.member.roles.some(r=>["Administrator", "Head Admin", "Admin", "Owner"].includes(r.name)) )
+    if(!message.member.roles.some(r=>["Administrator", "Head Admin", "perms", "Owner"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
 
     let member = message.mentions.members.first();
@@ -125,8 +125,8 @@ if(command === "kick") {
 
 if(command === "ban") {
 
-    if(!message.member.roles.some(r=>["Administrator", "Moderator", "Mod", "Admin"].includes(r.name)) )
-      return message.reply("Must have the role: Admin, Mod, Administrator, or Moderator");
+    if(!message.member.roles.some(r=>["Administrator", "Moderator", "perms", "Admin"].includes(r.name)) )
+      return message.reply("Must have the role: Admin, Mod, Administrator, perms, or Moderator");
 
     let member = message.mentions.members.first();
     if(!member)
